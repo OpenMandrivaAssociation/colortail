@@ -1,6 +1,6 @@
 %define name colortail
 %define version 0.3.0
-%define release 2mdk
+%define release  %mkrel 2
 
 %define fullname %{name}-%{version}
 
