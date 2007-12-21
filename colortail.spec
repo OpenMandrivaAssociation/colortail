@@ -13,6 +13,7 @@ Source: http://www.student.hk-r.se/~pt98jan/%{fullname}.tar.bz2
 Patch0: %{fullname}-gcc3.patch.bz2
 License: GPL
 Group: Monitoring
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: automake autoconf 
 
 %description
