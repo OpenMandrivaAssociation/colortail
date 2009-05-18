@@ -8,8 +8,8 @@ Summary: A colorised tail with configuration files
 Name: %{name}
 Version: %{version}
 Release: %{release}
-URL: http://www.student.hk-r.se/~pt98jan/colortail.html
-Source: http://www.student.hk-r.se/~pt98jan/%{fullname}.tar.bz2
+URL: http://joakimandersson.se/projects/colortail/
+Source: %{fullname}.tar.bz2
 Patch0: %{fullname}-gcc3.patch.bz2
 Patch1: %{fullname}-fix-gcc43.patch
 License: GPLv2+
