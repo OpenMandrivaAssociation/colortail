@@ -1,6 +1,6 @@
 %define name colortail
 %define version 0.3.0
-%define release  %mkrel 4
+%define release  %mkrel 5
 
 %define fullname %{name}-%{version}
 
@@ -11,7 +11,8 @@ Release: %{release}
 URL: http://www.student.hk-r.se/~pt98jan/colortail.html
 Source: http://www.student.hk-r.se/~pt98jan/%{fullname}.tar.bz2
 Patch0: %{fullname}-gcc3.patch.bz2
-License: GPL
+Patch1: %{fullname}-fix-gcc43.patch
+License: GPLv2+
 Group: Monitoring
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: automake autoconf 
@@ -24,6 +25,7 @@ In which it's specified which patterns result in which colors.
 %prep
 %setup -q %{fullname}
 %patch0 -p1 -b .includes
+%patch1 -p1 -b .gcc43
 %configure
 
 %build
