@@ -1,6 +1,6 @@
 %define name colortail
-%define version 0.3.0
-%define release  %mkrel 5
+%define version 0.3.2
+%define release  %mkrel 1
 
 %define fullname %{name}-%{version}
 
@@ -10,8 +10,6 @@ Version: %{version}
 Release: %{release}
 URL: http://joakimandersson.se/projects/colortail/
 Source: %{fullname}.tar.bz2
-Patch0: %{fullname}-gcc3.patch.bz2
-Patch1: %{fullname}-fix-gcc43.patch
 License: GPLv2+
 Group: Monitoring
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -24,11 +22,9 @@ In which it's specified which patterns result in which colors.
 
 %prep
 %setup -q %{fullname}
-%patch0 -p1 -b .includes
-%patch1 -p1 -b .gcc43
-%configure
 
 %build
+%configure
 %make
 
 %install
