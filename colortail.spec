@@ -1,19 +1,19 @@
-%define name colortail
-%define version 0.3.2
-%define release  %mkrel 1
+%define	name		colortail
+%define version		0.3.2
+%define release		%mkrel 2
 
 %define fullname %{name}-%{version}
 
-Summary: A colorised tail with configuration files
-Name: %{name}
-Version: %{version}
-Release: %{release}
-URL: http://joakimandersson.se/projects/colortail/
-Source: %{fullname}.tar.bz2
-License: GPLv2+
-Group: Monitoring
-BuildRoot: %{_tmppath}/%{name}-buildroot
-BuildRequires: automake autoconf 
+Summary: 	A colorised tail with configuration files
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+URL:		http://joakimandersson.se/projects/colortail/
+Source:		%{fullname}.tar.bz2
+License:	GPLv2+
+Group:		Monitoring
+BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRequires:	automake autoconf 
 
 %description
 Colortail is a log colorizer make log checking easier. 
