@@ -1,18 +1,12 @@
-%define	name		colortail
-%define version		0.3.2
-%define release		%mkrel 2
-
-%define fullname %{name}-%{version}
-
 Summary: 	A colorised tail with configuration files
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		colortail
+Version:	0.3.3
+Release:	%mkrel 1
 URL:		http://joakimandersson.se/projects/colortail/
-Source:		%{fullname}.tar.bz2
+Source:		%{name}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Monitoring
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	automake autoconf 
 
 %description
@@ -21,20 +15,20 @@ It works like tail but can read one or more configuration files.
 In which it's specified which patterns result in which colors. 
 
 %prep
-%setup -q %{fullname}
+%setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
-install -d $RPM_BUILD_ROOT/%{_sysconfdir}/%{name}
-install -m 0644 example-conf/conf* $RPM_BUILD_ROOT/%{_sysconfdir}/%{name}
+install -d %{buildroot}/%{_sysconfdir}/%{name}
+install -m 0644 example-conf/conf* %{buildroot}/%{_sysconfdir}/%{name}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
