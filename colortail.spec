@@ -2,7 +2,7 @@ Summary: 	A colorised tail with configuration files
 Name:		colortail
 Version:	0.3.3
 Release:	2
-URL:		http://joakimandersson.se/projects/colortail/
+URL:		https://joakimandersson.se/projects/colortail/
 Source:		%{name}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Monitoring
