@@ -7,6 +7,8 @@ Source:		%{name}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Monitoring
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	automake autoconf 
 
 %description
